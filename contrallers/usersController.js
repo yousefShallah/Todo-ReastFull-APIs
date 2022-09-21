@@ -4,7 +4,6 @@ const User = require("../models/users");
 const userServices = require("../servicess/users");
 
 const { SECRET = "secret" } = process.env;
-console.log("SECRETSECRETSECRET", SECRET);
 async function signup(req, res) {
   try {
     const passwordHash = await bcrypt.hash(req.body.password, 10);
